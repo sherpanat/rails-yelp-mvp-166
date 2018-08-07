@@ -1,0 +1,9 @@
+
+The index will be there
+<% @restaurants.each do |restaurant| %>
+  <li><%= restaurant.name %></li>
+<% end %>
+
+<%#= link_to 'Créer un nouveau restaurant', new_restaurant_path, class: 'btn btn-danger' %>
+
+<%= render 'form', restaurant: @restaurant %>
