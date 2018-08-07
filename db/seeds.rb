@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Review.destroy_all
+Restaurant.destroy_all
+
+
+Restaurant::CATEGORIES.each_with_index do |cat, i|
+  Restaurant.new(
+    name: "Restaurant #{i + 1}",
+    category: cat,
+    address: "#{i + 1} rue de chez toi"
+  ).save!
+end
