@@ -18,7 +18,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurant_path(@restaurant)
     else
-      render 'index', restaurants: Restaurant.all
+      render 'new'
     end
   end
 

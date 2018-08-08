@@ -4,6 +4,6 @@ The index will be there
   <li><%= restaurant.name %></li>
 <% end %>
 
-<%#= link_to 'Créer un nouveau restaurant', new_restaurant_path, class: 'btn btn-danger' %>
+<%= link_to 'Créer un nouveau restaurant', new_restaurant_path, class: 'btn btn-danger' %>
 
 <%= render 'form', restaurant: @restaurant %>
